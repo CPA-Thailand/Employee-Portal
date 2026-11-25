@@ -10,58 +10,58 @@
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-title" content="Staff Portal">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#b6201d">
+<meta name="theme-color" content="#183d5f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
   :root{
-    --blue-900:#5c1110; --blue-700:#951a17; --blue-600:#b6201d; --blue-100:#f5dcdb; --blue-50:#fbf1f0;
-    --ink:#1e293b; --muted:#64748b; --line:#e6dede; --bg:#f6f3f3; --card:#ffffff;
+    --pri:#183d5f; --pri-dark:#0f2840; --pri-100:#d5e2ef; --pri-50:#eef3f8;
+    --acc:#b5231d; --acc-50:#fbf1f0;
+    --ink:#1e293b; --muted:#5f6b7a; --line:#dfe5ec; --bg:#f9fafb; --card:#ffffff; --r:9px;
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:'Kanit',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+  body{margin:0;font-family:'Sarabun',sans-serif;font-size:16px;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
 
-  /* Header: logos + title, same layout as the booking/refund forms */
-  .topbar{background:#fff;border-bottom:3px solid var(--blue-600);box-shadow:0 2px 8px rgba(92,17,16,.08)}
+  .topbar{background:#fff;border-bottom:3px solid var(--acc);box-shadow:0 2px 8px rgba(24,61,95,.08)}
   .topbar-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .logos{display:flex;align-items:center;gap:14px}
-  .logos img{height:44px;width:auto;display:block}
+  .logos img{height:46px;width:auto;display:block}
   .title{flex:1;min-width:200px}
-  .title h1{margin:0;font-size:1.35rem;font-weight:600;color:var(--blue-900)}
-  .title p{margin:2px 0 0;font-size:.8rem;color:var(--muted)}
-  .refresh{border:1px solid var(--line);background:var(--blue-50);color:var(--blue-700);border-radius:10px;padding:9px 14px;font:inherit;font-size:.85rem;cursor:pointer}
-  .refresh:hover{background:var(--blue-100)}
-  .refresh:focus-visible,.cat:focus-visible,#q:focus-visible,.go:focus-visible{outline:3px solid #fca5a5;outline-offset:2px}
+  .title h1{margin:0;font-size:1.45rem;font-weight:600;color:var(--pri)}
+  .title p{margin:2px 0 0;font-size:.85rem;color:var(--muted)}
+  .refresh{border:1px solid var(--line);background:var(--pri-50);color:var(--pri);border-radius:var(--r);padding:9px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+  .refresh:hover{background:var(--pri-100)}
+  .refresh:focus-visible,.cat:focus-visible,#q:focus-visible,.go:focus-visible{outline:3px solid #93a9c2;outline-offset:2px}
 
   main{max-width:1100px;margin:0 auto;padding:24px 20px 40px;width:100%;flex:1}
 
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:22px;box-shadow:0 1px 3px rgba(92,17,16,.05)}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:22px;box-shadow:0 1px 3px rgba(24,61,95,.05)}
   .search{position:relative}
   .search i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#94a3b8}
-  #q{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:.95rem;background:var(--blue-50)}
+  #q{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--line);border-radius:var(--r);font:inherit;font-size:1rem;background:var(--bg)}
   .cats{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-  .cat{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:6px 14px;font:inherit;font-size:.82rem;cursor:pointer}
-  .cat:hover{background:var(--blue-50)}
-  .cat.on{background:var(--blue-600);border-color:var(--blue-600);color:#fff}
+  .cat{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:6px 14px;font:inherit;font-size:.88rem;cursor:pointer}
+  .cat:hover{background:var(--pri-50)}
+  .cat.on{background:var(--pri);border-color:var(--pri);color:#fff}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue-600);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
   .card-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-  .ico{width:44px;height:44px;border-radius:10px;background:var(--blue-50);color:var(--blue-700);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex:none}
-  .tag{font-size:.72rem;color:var(--blue-700);background:var(--blue-50);border:1px solid var(--blue-100);border-radius:6px;padding:2px 8px}
-  .card h3{margin:0 0 4px;font-size:1rem;font-weight:500}
-  .card p{margin:0;font-size:.82rem;color:var(--muted);line-height:1.5}
-  .go{display:block;text-align:center;text-decoration:none;background:var(--blue-600);color:#fff;border-radius:10px;padding:9px;font-size:.88rem;font-weight:500}
-  .go:hover{background:var(--blue-700)}
+  .ico{width:44px;height:44px;border-radius:var(--r);background:var(--pri-50);color:var(--pri);display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex:none}
+  .tag{font-size:.78rem;color:var(--acc);background:var(--acc-50);border:1px solid #f0d4d2;border-radius:6px;padding:2px 8px}
+  .card h3{margin:0 0 4px;font-size:1.08rem;font-weight:600;color:var(--pri-dark)}
+  .card p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.5}
+  .go{display:block;text-align:center;text-decoration:none;background:var(--pri);color:#fff;border-radius:var(--r);padding:9px;font-size:.95rem;font-weight:500}
+  .go:hover{background:var(--pri-dark)}
 
   .state{text-align:center;padding:48px 16px;color:var(--muted)}
-  .state i{font-size:2.4rem;margin-bottom:10px;color:var(--blue-600)}
+  .state i{font-size:2.4rem;margin-bottom:10px;color:var(--pri)}
   .hidden{display:none!important}
-  .notice{background:#fffbeb;border:1px solid #fde68a;color:#92400e;border-radius:10px;padding:12px 14px;font-size:.88rem;margin-bottom:16px}
+  .notice{background:#fffbeb;border:1px solid #fde68a;color:#92400e;border-radius:var(--r);padding:12px 14px;font-size:.92rem;margin-bottom:16px}
 
-  footer{text-align:center;font-size:.75rem;color:var(--muted);padding:18px;border-top:1px solid var(--line);background:#fff}
+  footer{text-align:center;font-size:.8rem;color:var(--muted);padding:18px;border-top:1px solid var(--line);background:#fff}
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -71,7 +71,7 @@
   <div class="topbar-inner">
     <div class="logos" id="logos"></div>
     <div class="title">
-      <h1>Staff Portal</h1>
+      <h1>CPA Staff Portal</h1>
       <p>ศูนย์รวมระบบงานและลิงก์สำหรับพนักงาน</p>
     </div>
     <button class="refresh" onclick="load()"><i id="spin" class="fa-solid fa-arrows-rotate"></i> อัปเดตข้อมูล</button>
